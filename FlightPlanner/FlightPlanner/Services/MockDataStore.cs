@@ -40,16 +40,6 @@ namespace FlightPlanner.Services
                         {
                             Action = InFlightCommandEnum.cw,
                             Value = 120
-                        },
-                        new FlightCommands
-                        {
-                            Action = InFlightCommandEnum.forward,
-                            Value = 60
-                        },
-                        new FlightCommands
-                        {
-                            Action = InFlightCommandEnum.back,
-                            Value = 60
                         }
                     }
                 },

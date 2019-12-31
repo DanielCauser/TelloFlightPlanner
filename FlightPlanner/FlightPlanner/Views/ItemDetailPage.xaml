@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="FlightPlanner.Views.ItemDetailPage" Title="{Binding Title}">
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Text:" FontSize="Medium" />
+        
+        <Label Text="{Binding Item.Text}" d:Text="Item name" FontSize="Small" />
+        
+        <Label Text="Description:" FontSize="Medium" />
+        
+        <Label Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small" />
+        
+        <Label Text="Flight Plan:" FontSize="Medium" />
+        <CollectionView ItemsSource="{Binding Item.FlightCommands}">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical"
+                             VerticalItemSpacing="20"
+                             HorizontalItemSpacing="20"/>
+        </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>	                    
+                    <Frame HasShadow="False"
+                           Padding="10,0,10,0">
+                        <ContentView>
+                            <Label FontSize="22" 
+                                   HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="{Binding Action}" FontAttributes="Bold" FontSize="22" />
+                                            <Span Text=" " />
+                                            <Span Text="{Binding Value}"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>    
+                        </ContentView>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+        <Button Text="Start Flight"
+                VerticalOptions="End"
+                Command="{Binding StartFlightCommand}" 
+                Style="{x:StaticResource OkayButtonStyle}"/>
+        
+        <Button Text="Emergency Shut down"
+                VerticalOptions="End"
+                Command="{Binding EmergencyShutdownCommand}" 
+                Style="{x:StaticResource CancelButtonStyle}"/>
+    </StackLayout>
+</ContentPage>

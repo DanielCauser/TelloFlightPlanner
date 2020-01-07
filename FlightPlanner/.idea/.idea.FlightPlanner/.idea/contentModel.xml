@@ -44,6 +44,7 @@
           <e p="FlightControlCommandEnum.cs" t="Include" />
           <e p="IAircraftService.cs" t="Include" />
           <e p="IDataStore.cs" t="Include" />
+          <e p="IFlightCommand.cs" t="Include" />
           <e p="InFlightCommandEnum.cs" t="Include" />
           <e p="MockDataStore.cs" t="Include" />
         </e>

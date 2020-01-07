@@ -19,7 +19,7 @@ namespace FlightPlanner.Services
         {
             _sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             _endPoint = new IPEndPoint(IPAddress.Parse("192.168.10.1"), 8889);
-            _defaultAirCraftSpeed = 40;
+            _defaultAirCraftSpeed = 100;
         }
 
         public async Task ExecuteFlightPlan(Item flightCommands, CancellationToken cancellationToken)

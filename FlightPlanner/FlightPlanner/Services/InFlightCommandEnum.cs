@@ -8,6 +8,7 @@ namespace FlightPlanner.Services
         right,
         forward,
         back,
-        cw
+        cw,
+        ccw
     }
 }

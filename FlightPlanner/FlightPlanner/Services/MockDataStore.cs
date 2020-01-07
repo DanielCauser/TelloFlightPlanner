@@ -24,22 +24,22 @@ namespace FlightPlanner.Services
                         new FlightCommands
                         {
                             Action = InFlightCommandEnum.cw,
-                            Value = 120
+                            Value = 180
                         },
                         new FlightCommands
                         {
                             Action = InFlightCommandEnum.down,
-                            Value = 40
+                            Value = 50
                         },
                         new FlightCommands
                         {
                             Action = InFlightCommandEnum.up,
-                            Value = 40
+                            Value = 50
                         },
                         new FlightCommands
                         {
-                            Action = InFlightCommandEnum.cw,
-                            Value = 120
+                            Action = InFlightCommandEnum.ccw,
+                            Value = 180
                         }
                     }
                 },
